@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {MovieService} from "../../services/movie.service";
 
 @Component({
   selector: 'app-movies',
@@ -9,5 +10,9 @@ import { CommonModule } from '@angular/common';
   styleUrl: './movies.component.css'
 })
 export class MoviesComponent {
+  constructor(
+    movieService: MovieService
+  ) {}
+
 
 }
