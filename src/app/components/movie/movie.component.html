@@ -1,0 +1,10 @@
+<div class="movie" *ngIf="movie" (click)="myDialog.showModal()">
+  <h3>{{movie.title}}</h3>
+  <p>Rating: {{movie.voteAverage}}</p>
+    <img src="assets/movie_placeholder.png" alt="placeholder">
+</div>
+
+
+<dialog #myDialog (click)="myDialog.close()">
+  {{movie.overview}}
+</dialog>

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
+import {Movie} from "../interfaces/movie";
 @Injectable({
   providedIn: 'root'
 })
@@ -10,6 +11,6 @@ export class MovieService {
     private httpClient: HttpClient
   ) { }
   getMoviesFromTo(from: number, to: number) : Observable<any> {
-    return this.httpClient.get(`http://localhost:8080/movie/paginated/${from}/${to}`);
+    return this.httpClient.get<Movie>(`http://localhost:8080/movie/paginated/${from}/${to}`)
   }
 }

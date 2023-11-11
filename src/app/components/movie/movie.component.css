@@ -1,0 +1,39 @@
+.movie {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.movie:hover {
+  background-color: #FCDB3C;
+  cursor: pointer;
+  border-radius: 3rem;
+}
+
+.movie p, h3{
+  text-align: center;
+}
+
+.movie img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+dialog {
+  background-color: rgba(32, 82, 221, 0.8);
+  color: white;
+  overflow: hidden;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 20px 8px #d0d0d0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
