@@ -41,3 +41,15 @@ main h3 {
 main h3:after {
   content: counter(css-counter) ""; /* Apply counter before children's content. */
 }
+
+dialog {
+  background-color: rgba(221, 82, 32, 0.9);
+  color: white;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 0 20px 8px #d0d0d0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

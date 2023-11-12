@@ -1,10 +1,10 @@
 <form [formGroup]="yearForm">
-  <input placeholder="YYYY"
+  <input placeholder="1950-2017"
          type="text"
          id="name"
          formControlName="year"
   >
-  <button (click)="logForm()">Request top 10 by year!</button>
+  <button (click)="requestTopTenByYear(validationDialog)">Request top 10 by year!</button>
 </form>
 <main>
   <div *ngFor="let movie of movies">
@@ -14,3 +14,7 @@
     </section>
   </div>
 </main>
+
+<dialog #validationDialog>
+  <h3>Invalid input!</h3>
+</dialog>

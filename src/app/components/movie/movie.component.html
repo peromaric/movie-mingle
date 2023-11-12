@@ -1,5 +1,5 @@
 <div [ngClass]="{'movie-top-ten': isTopTen, 'movie': !isTopTen}"
-      *ngIf="movie" (click)="myDialog.showModal()">
+      *ngIf="movie" (click)="movieDialog.showModal()">
   <h3>{{movie.title}}</h3>
   <p>Rating: {{movie.voteAverage}}</p>
   <p>Year: {{movie.releaseDate}}</p>
@@ -8,7 +8,7 @@
 </div>
 
 
-<dialog #myDialog (click)="myDialog.close()">
+<dialog #movieDialog (click)="movieDialog.close()">
   <h3>{{movie.title}}</h3>
   {{movie.overview}}
 </dialog>

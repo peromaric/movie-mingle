@@ -15,14 +15,14 @@ import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from "@angular/
 export class TopTenComponent {
 
   movies?: Movie[];
+  validationError: boolean = false;
   yearForm: FormGroup = this.formBuilder.group({
     year: [
       null,
       [
         Validators.required,
-        Validators.max(4),
-        Validators.min(4),
-        Validators.pattern("(19|20)\\\d{2}")
+        Validators.max(2017),
+        Validators.min(1950)
       ]
     ]
   });
@@ -40,12 +40,21 @@ export class TopTenComponent {
     );
   }
 
-  logForm() {
-    console.log(this.year)
+  requestTopTenByYear(validationDialog: HTMLDialogElement) {
+    if(this.year?.valid) {
+      this.movieService.getTopTenByYear(this.year.value).subscribe(
+        (data: Movie[]) => {
+          this.movies = data;
+        }
+      )
+    } else {
+      this.year?.setValue(null);
+      validationDialog.showModal();
+      setTimeout(() => validationDialog.close(), 1500);
+    }
   }
 
   get year() {
     return this.yearForm.get('year');
   }
-
 }
