@@ -31,18 +31,17 @@ export class MoviesComponent {
   }
 
   onScroll(event: any) {
-    // visible height + pixel scrolled >= total height
-    if (event.target.offsetHeight + event.target.scrollTop >= event.target.scrollHeight) {
+    // height + pixel + offset >= total height
+    if (event.target.offsetHeight + event.target.scrollTop + 50 >= event.target.scrollHeight) {
       if (this.movies) {
         this.from += 100;
         this.to += 100;
         this.movieService.getMoviesFromTo(this.from, this.to).subscribe(
           (data: Movie[]) => {
             this.movies?.push(...data);
-            console.log("During update:" + this.movies?.length)
+            console.log("Updating movie list...");
           });
       }
     }
-    console.log("After update: " + this.movies?.length)
   }
 }

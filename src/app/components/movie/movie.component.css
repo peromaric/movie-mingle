@@ -5,28 +5,42 @@
   justify-content: space-between;
   align-items: center;
   align-content: center;
+  margin: 3rem;
   padding: 1rem;
-  margin: 1rem;
 }
 
-.movie:hover {
+.movie-top-ten {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.movie:hover, .movie-top-ten:hover {
   background-color: #FCDB3C;
   cursor: pointer;
   border-radius: 3rem;
 }
 
-.movie p, h3{
+.movie, .movie-top-ten, p, h3 {
   text-align: center;
 }
 
 .movie img {
   width: 60%;
   height: 60%;
-  object-fit: contain;
 }
 
+.movie-top-ten img {
+  width: 90%;
+  height: 90%;
+}
+
+
 dialog {
-  background-color: rgba(32, 82, 221, 0.8);
+  background-color: rgba(32, 82, 221, 0.9);
   color: white;
   overflow: hidden;
   border-radius: 5px;

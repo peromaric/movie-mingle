@@ -11,6 +11,5 @@ import {Movie} from "../../interfaces/movie";
 })
 export class MovieComponent {
   @Input() movie!: Movie
-
-
+  @Input() isTopTen: boolean = false;
 }

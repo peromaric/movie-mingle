@@ -1,7 +1,7 @@
-<div class="movies" (scroll)="onScroll($event)">
+<main class="movies" (scroll)="onScroll($event)">
   <div *ngFor="let movie of movies">
     <app-movie [movie]="movie"></app-movie>
   </div>
-</div>
+</main>
 
 

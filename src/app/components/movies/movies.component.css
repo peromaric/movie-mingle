@@ -1,4 +1,4 @@
-.movies {
+main {
   height: 45rem;
   overflow-y: auto;
   display: flex;

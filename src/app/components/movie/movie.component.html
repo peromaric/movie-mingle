@@ -1,10 +1,14 @@
-<div class="movie" *ngIf="movie" (click)="myDialog.showModal()">
+<div [ngClass]="{'movie-top-ten': isTopTen, 'movie': !isTopTen}"
+      *ngIf="movie" (click)="myDialog.showModal()">
   <h3>{{movie.title}}</h3>
   <p>Rating: {{movie.voteAverage}}</p>
+  <p>Year: {{movie.releaseDate}}</p>
+  <p>Revenue: {{(movie.revenue/1000000).toFixed(2)}}M</p>
     <img src="assets/movie_placeholder.png" alt="placeholder">
 </div>
 
 
 <dialog #myDialog (click)="myDialog.close()">
+  <h3>{{movie.title}}</h3>
   {{movie.overview}}
 </dialog>

@@ -1,0 +1,16 @@
+<form [formGroup]="yearForm">
+  <input placeholder="YYYY"
+         type="text"
+         id="name"
+         formControlName="year"
+  >
+  <button (click)="logForm()">Request top 10 by year!</button>
+</form>
+<main>
+  <div *ngFor="let movie of movies">
+    <section>
+      <h3>No. </h3>
+      <app-movie [movie]="movie" [isTopTen]="true"></app-movie>
+    </section>
+  </div>
+</main>

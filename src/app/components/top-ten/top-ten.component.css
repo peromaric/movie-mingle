@@ -1,0 +1,43 @@
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+form input, button {
+  padding: 1em;
+  font-weight: bolder;
+  border-radius: 3rem;
+  border-width: medium;
+}
+
+section {
+  padding: 2rem;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  counter-reset: css-counter 0;
+}
+
+main h3 {
+  counter-increment: css-counter 1; /* Increase the counter by 1. */
+}
+
+main h3:after {
+  content: counter(css-counter) ""; /* Apply counter before children's content. */
+}

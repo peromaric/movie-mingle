@@ -8,14 +8,22 @@ header {
   border-bottom-width: thick;
 }
 
-img {
-  width: auto;
-  height: auto;
-  align-self: center;
+a {
+  width: 10rem;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+#main-logo {
   max-height: 100%;
   max-width: 100%;
   background-color: #02D9D0;
   border-radius: 100%;
+}
+
+#top-ten-logo {
+  max-height: 100%;
+  max-width: 100%;
 }
 
 h1 {
